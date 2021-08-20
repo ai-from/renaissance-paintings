@@ -7,18 +7,21 @@
 <!--    <router-view/>-->
     <Header />
     <Title />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
 import Title from "./components/Title";
+import Footer from "./components/Footer";
 
 export default{
   name: 'App',
   components: {
     Header,
-    Title
+    Title,
+    Footer
   }
 }
 </script>
