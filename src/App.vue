@@ -7,6 +7,7 @@
 <!--    <router-view/>-->
     <Header />
     <Title />
+    <Filters />
     <Footer />
   </div>
 </template>
@@ -14,6 +15,7 @@
 <script>
 import Header from "./components/Header";
 import Title from "./components/Title";
+import Filters from "./components/Filters";
 import Footer from "./components/Footer";
 
 export default{
@@ -21,6 +23,7 @@ export default{
   components: {
     Header,
     Title,
+    Filters,
     Footer
   }
 }

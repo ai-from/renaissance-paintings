@@ -43,7 +43,7 @@ export default{
       cursor: pointer
     &-text
       white-space: nowrap
-      @include font-roboto-1
+      @include font-header-1
   &__right
     display: grid
     grid-template-columns: repeat(3, min-content)
@@ -51,9 +51,9 @@ export default{
     justify-self: end
     &-text
       margin: 0 4px 0 12px
-      @include font-roboto-1
+      @include font-header-1
   &__basket-cnt
-    @include font-roboto-2
+    @include font-header-2
     background: $light
     width: 20px
     height: 20px
