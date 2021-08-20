@@ -28,7 +28,7 @@ export default{
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .header
   display: grid
   grid-template-columns: 1fr 1fr

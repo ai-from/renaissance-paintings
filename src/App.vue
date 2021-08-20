@@ -6,20 +6,23 @@
 <!--    </div>-->
 <!--    <router-view/>-->
     <Header />
+    <Title />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
+import Title from "./components/Title";
 
 export default{
   name: 'App',
   components: {
-    Header
+    Header,
+    Title
   }
 }
 </script>
 
 <style lang="sass">
-
+#app
 </style>
