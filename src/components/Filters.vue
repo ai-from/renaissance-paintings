@@ -6,8 +6,9 @@
       class="filters__tab"
       :class="{active: item.active}"
       :to="item.url"
+      @click.native="tabClick(index)"
     >
-      <span @click="tabClick(index)">
+      <span>
         {{ item.title }}
       </span>
     </router-link>

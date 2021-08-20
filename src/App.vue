@@ -1,13 +1,9 @@
 <template>
   <div id="app">
-<!--    <div id="nav">-->
-<!--      <router-link to="/">Home</router-link> |-->
-<!--      <router-link to="/sold">Sold</router-link>-->
-<!--    </div>-->
-<!--    <router-view/>-->
     <Header />
     <Title />
     <Filters />
+    <Search />
     <Footer />
   </div>
 </template>
@@ -17,6 +13,7 @@ import Header from "./components/Header";
 import Title from "./components/Title";
 import Filters from "./components/Filters";
 import Footer from "./components/Footer";
+import Search from "./components/Search";
 
 export default{
   name: 'App',
@@ -24,6 +21,7 @@ export default{
     Header,
     Title,
     Filters,
+    Search,
     Footer
   }
 }
