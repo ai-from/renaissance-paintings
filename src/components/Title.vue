@@ -1,6 +1,8 @@
 <template>
   <div class="title">
-    Картины эпохи<br>возрождения
+    <div class="title__wrap">
+      <span>К</span>артины эп<span>ох</span>и<br>в<span>о</span>зр<span>о</span>ждения
+    </div>
   </div>
 </template>
 
@@ -19,4 +21,6 @@ export default {
   justify-content: center
   align-content: center
   text-align: center
+  span
+    @include loraItalic-86-90-032-light-uppercase
 </style>

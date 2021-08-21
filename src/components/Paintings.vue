@@ -67,6 +67,15 @@ export default {
   },
   created() {
     this.paintings = this.$store.state.paintings
+  },
+  watch: {
+    '$route'(to, from) {
+      if(to.path === '/') {
+        this.paintings = this.$store.state.paintings
+      } else if(to.path === '/sold') {
+        this.paintings = this.$store.state.paintings.filter(item => item.isSold)
+      }
+    }
   }
 }
 </script>
@@ -74,13 +83,14 @@ export default {
 <style lang="sass" scoped>
 .paintings
   display: grid
-  grid-template-columns: repeat(4, min-content)
+  grid-template-columns: repeat(4, 280px)
   grid-gap: 32px
   .painting
     width: 280px
     height: 210px
     position: relative
     cursor: pointer
+    overflow: hidden
     &:nth-child(3)
       grid-column: 3/5
       grid-row: 1/3
@@ -99,6 +109,8 @@ export default {
 
     &__img
       display: block
+      min-width: 100%
+      min-height: 100%
     &__info
       position: absolute
       top: 0

@@ -31,6 +31,18 @@ export default {
       this.filters.forEach(item => item.active = false)
       this.filters[index].active = true
     }
+  },
+  watch: {
+    '$route'(to, from) {
+      if(to.path === '/') {
+        this.filters[0].active = true
+        this.filters[1].active = false
+      }
+      else if(to.path === '/sold') {
+        this.filters[0].active = false
+        this.filters[1].active = true
+      }
+    }
   }
 }
 </script>
