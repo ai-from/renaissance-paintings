@@ -21,7 +21,7 @@ export default new Vuex.Store({
         oldPrice: '2 000 000',
         newPrice: '1 000 000',
         isSold: false,
-        inBasket: true,
+        inBasket: false,
         src: 'img_2.png'
       },
       {
@@ -47,7 +47,7 @@ export default new Vuex.Store({
         data: 'Сандро Боттичелли, 1505 г.',
         oldPrice: '2 000 000',
         newPrice: '1 000 000',
-        isSold: false,
+        isSold: true,
         inBasket: false,
         src: 'img_5.png'
       },
@@ -74,7 +74,7 @@ export default new Vuex.Store({
         data: 'Сандро Боттичелли, 1508 г.',
         oldPrice: '2 000 000',
         newPrice: '1 000 000',
-        isSold: false,
+        isSold: true,
         inBasket: false,
         src: 'img_8.png'
       },
@@ -119,15 +119,23 @@ export default new Vuex.Store({
         data: 'Сандро Боттичелли, 1513 г.',
         oldPrice: '2 000 000',
         newPrice: '1 000 000',
-        isSold: false,
+        isSold: true,
         inBasket: false,
         src: 'img_13.png'
       }
     ]
   },
   mutations: {
+    toBasket(state, index) {
+      state.paintings[index].inBasket = true
+    }
   },
   actions: {
+  },
+  getters: {
+    getInBasket(state) {
+      return state.paintings.filter(item => item.inBasket).length
+    }
   },
   modules: {
   }

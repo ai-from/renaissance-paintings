@@ -24,7 +24,10 @@
             <div class="painting__oldPrice">{{ item.oldPrice }} $</div>
             <div class="painting__newPrice">{{ item.newPrice }} $</div>
           </div>
-          <Button :title="item.inBasket ? 'В корзине' : 'Купить'" :in-basket="item.inBasket"/>
+          <Button
+            @click.native="buyClick(index)"
+            :title="item.inBasket ? 'В корзине' : 'Купить'"
+            :in-basket="item.inBasket"/>
         </div>
 
         <div class="painting__bottom-hammer" v-else>
@@ -53,6 +56,14 @@ export default {
   },
   components: {
     Button
+  },
+  methods: {
+    buyClick(index) {
+      if(this.paintings[index].inBasket) return false
+      else {
+        this.$store.commit("toBasket", index)
+      }
+    }
   },
   created() {
     this.paintings = this.$store.state.paintings

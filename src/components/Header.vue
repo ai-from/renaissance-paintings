@@ -16,7 +16,7 @@
         alt="Basket"
         class="header__basket" />
       <div class="header__right-text">Корзина</div>
-      <div class="header__basket-cnt">5</div>
+      <div class="header__basket-cnt">{{ inBasketSum }}</div>
     </div> <!-- header__right -->
 
   </header>
@@ -24,7 +24,12 @@
 
 <script>
 export default{
-  name: 'Header'
+  name: 'Header',
+  computed: {
+    inBasketSum() {
+      return this.$store.getters.getInBasket
+    }
+  }
 }
 </script>
 
