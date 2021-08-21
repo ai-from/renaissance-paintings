@@ -37,9 +37,10 @@ export default {
     background: transparent
     color: $light
     padding: 0 100px 0 0
-    @include font-search-2
+    @include roboto-16-24-light
     &::placeholder
-      @include font-search-1
+      @include roboto-16-24-light
+      opacity: .5
   &__btn
     display: grid
     grid-template-columns: repeat(2, min-content)
@@ -54,6 +55,6 @@ export default {
     &:hover
       opacity: .5
     &-text
-      @include font-search-3
+      @include roboto-14-20-096-light-uppercase
     &-img
 </style>

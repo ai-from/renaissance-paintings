@@ -1,4 +1,11 @@
-@mixin font-header-1
+@mixin roboto-12-16-096-dark
+  font-family: Roboto, Arial, sans-serif
+  font-size: .75rem
+  line-height: 1rem
+  letter-spacing: .06rem
+  color: $dark
+
+@mixin roboto-14-20-096-light-uppercase
   font-family: Roboto, Arial, sans-serif
   font-size: .875rem
   line-height: 1.25rem
@@ -6,40 +13,55 @@
   color: $light
   text-transform: uppercase
 
-@mixin font-header-2
+@mixin roboto-14-21-light
   font-family: Roboto, Arial, sans-serif
-  font-size: .75rem
-  line-height: 1rem
-  letter-spacing: .06rem
-  color: $black
-
-@mixin font-title-1
-  font-family: Roboto, Arial, sans-serif
-  font-size: 5.375rem
-  line-height: 5.625rem
-  letter-spacing: .02rem
+  font-size: .875rem
+  line-height: 1.312rem
   color: $light
-  text-transform: uppercase
 
-@mixin font-filters-1
+@mixin roboto-14-24-light
+  font-family: Roboto, Arial, sans-serif
+  font-size: .875rem
+  line-height: 1.5rem
+  color: $light
+
+@mixin robotoBold-14-24-light
+  font-family: RobotoBold, Arial, sans-serif
+  font-size: .875rem
+  line-height: 1.5rem
+  color: $light
+  font-weight: 700
+
+@mixin roboto-16-24-light
+  font-family: Roboto, Arial, sans-serif
+  font-size: 1rem
+  line-height: 1.5rem
+  color: $light
+
+@mixin robotoBold-16-24-light-700
+  font-family: RobotoBold, Arial, sans-serif
+  font-size: 1rem
+  line-height: 1.5rem
+  color: $light
+  font-weight: 700
+
+@mixin roboto-16-36-light
   font-family: Roboto, Arial, sans-serif
   font-size: 1rem
   line-height: 2.25rem
   color: $light
   text-decoration: none
 
-@mixin font-search-1
-  @include font-filters-1
-  opacity: .5
-
-@mixin font-search-2
-  @include font-filters-1
-
-@mixin font-search-3
-  @include font-header-1
-
-@mixin font-footer-1
+@mixin roboto-18-27-light
   font-family: Roboto, Arial, sans-serif
   font-size: 1.125rem
   line-height: 1.687rem
   color: $light
+
+@mixin roboto-86-90-032-light-uppercase
+  font-family: Roboto, Arial, sans-serif
+  font-size: 5.375rem
+  line-height: 5.625rem
+  letter-spacing: .02rem
+  color: $light
+  text-transform: uppercase

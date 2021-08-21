@@ -14,7 +14,7 @@ export default {
 .title
   height: 272px
   background: url("../assets/title/bg-f.svg") no-repeat center center
-  @include font-title-1
+  @include roboto-86-90-032-light-uppercase
   display: grid
   justify-content: center
   align-content: center

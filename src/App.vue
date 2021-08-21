@@ -4,6 +4,7 @@
     <Title />
     <Filters />
     <Search />
+    <Paintings />
     <Footer />
   </div>
 </template>
@@ -12,8 +13,9 @@
 import Header from "./components/Header";
 import Title from "./components/Title";
 import Filters from "./components/Filters";
-import Footer from "./components/Footer";
 import Search from "./components/Search";
+import Paintings from "./components/Paintings";
+import Footer from "./components/Footer";
 
 export default{
   name: 'App',
@@ -22,6 +24,7 @@ export default{
     Title,
     Filters,
     Search,
+    Paintings,
     Footer
   }
 }

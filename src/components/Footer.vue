@@ -27,7 +27,7 @@ export default {
   grid-template-columns: 1fr 1fr
   align-content: center
   align-items: center
-  @include font-footer-1
+  @include roboto-18-27-light
   &__right
     justify-self: end
 </style>

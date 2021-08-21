@@ -38,7 +38,7 @@ export default {
 <style lang="sass" scoped>
 .filters
   &__tab
-    @include font-filters-1
+    @include roboto-16-36-light
     padding: 8px 17px
     border: 1px solid transparent
     margin: 0 20px 0 0

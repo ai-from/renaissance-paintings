@@ -43,7 +43,7 @@ export default{
       cursor: pointer
     &-text
       white-space: nowrap
-      @include font-header-1
+      @include roboto-14-20-096-light-uppercase
   &__right
     display: grid
     grid-template-columns: repeat(3, min-content)
@@ -51,9 +51,12 @@ export default{
     justify-self: end
     &-text
       margin: 0 4px 0 12px
-      @include font-header-1
+      @include roboto-14-20-096-light-uppercase
+  &__basket
+    position: relative
+    top: -3px
   &__basket-cnt
-    @include font-header-2
+    @include roboto-12-16-096-dark
     background: $light
     width: 20px
     height: 20px
