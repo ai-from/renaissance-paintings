@@ -45,10 +45,12 @@ export default{
     margin: 0 auto 90px
     .search
       justify-self: right
+  .paintings
+    max-width: 1216px
   .footer
     margin: 150px 0 0
 
-  .paintings, .footer
+  .footer
     display: none
 
 @media screen and (max-width: 1500px)
@@ -76,6 +78,8 @@ export default{
   #app
     .title
       margin: 50px 0
+    .app__filter-search
+      margin: 0 auto 50px
 
 @media screen and (max-width: 576px)
   #app

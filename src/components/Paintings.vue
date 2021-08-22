@@ -100,6 +100,7 @@ export default {
   display: grid
   grid-template-columns: repeat(4, 280px)
   grid-gap: 32px
+  margin: 0 auto
   .painting
     width: 280px
     height: 210px
@@ -184,4 +185,31 @@ export default {
 
   &__no-items
     @include roboto-18-27-light
+
+@media screen and (max-width: 1500px)
+  .paintings
+    width: 80%
+    grid-template-columns: repeat(3, 280px)
+    justify-content: space-between
+    .painting
+      &:nth-child(3)
+        grid-column: 2/4
+        grid-row: 1/3
+        width: 100%
+        height: 100%
+
+@media screen and (max-width: 1200px)
+  .paintings
+    grid-template-columns: repeat(auto-fill, 280px)
+    .painting
+      &:nth-child(3)
+        grid-column: unset
+        grid-row: unset
+        .painting__img
+          width: 280px
+          height: auto
+
+@media screen and (max-width: 740px)
+  .paintings
+    justify-content: center
 </style>
