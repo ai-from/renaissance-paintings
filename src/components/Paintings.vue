@@ -1,5 +1,5 @@
 <template>
-  <div class="paintings">
+  <div class="paintings" :class="{noItems: paintings.length === 0}">
     <div
       class="painting"
       :class="{sold: item.isSold, basket: item.inBasket}"
@@ -101,6 +101,8 @@ export default {
   grid-template-columns: repeat(4, 280px)
   grid-gap: 32px
   margin: 0 auto
+  &.noItems
+    grid-template-columns: 1fr
   .painting
     width: 280px
     height: 210px
@@ -185,6 +187,7 @@ export default {
 
   &__no-items
     @include roboto-18-27-light
+    text-align: center
 
 @media screen and (max-width: 1500px)
   .paintings
