@@ -1,10 +1,11 @@
 <template>
   <div class="search">
     <input
+      v-model="searchValue"
       type="text"
       class="search__input"
       placeholder="Поиск по названию картины">
-    <div class="search__btn">
+    <div class="search__btn" @click="search">
       <div class="search__btn-text">Найти</div>
       <img
         :src="require(`/src/assets/search/search.svg`)"
@@ -19,6 +20,14 @@ export default {
   name: 'Search',
   data() {
     return {
+      searchValue: ''
+    }
+  },
+  methods: {
+    search() {
+      if(this.searchValue) {
+        this.$root.$emit('search', this.searchValue)
+      }
     }
   }
 }

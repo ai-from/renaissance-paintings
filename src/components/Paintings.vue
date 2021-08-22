@@ -25,7 +25,7 @@
             <div class="painting__newPrice">{{ item.newPrice }} $</div>
           </div>
           <Button
-            @click.native="buyClick(index)"
+            @click.native="buyClick(item.id)"
             :title="item.inBasket ? 'В корзине' : 'Купить'"
             :in-basket="item.inBasket"/>
         </div>
@@ -41,6 +41,9 @@
       </div> <!-- painting__info -->
 
     </div> <!-- painting -->
+    <div class="paintings__no-items" v-if="paintings.length === 0">
+      Поиск не дал результатов
+    </div>
   </div>
 </template>
 
@@ -58,15 +61,27 @@ export default {
     Button
   },
   methods: {
-    buyClick(index) {
-      if(this.paintings[index].inBasket) return false
+    buyClick(id) {
+      const curr = this.paintings.filter(item => item.id === id)
+      if(curr[0].inBasket) return false
       else {
-        this.$store.commit("toBasket", index)
+        this.$store.commit("toBasket", id)
       }
     }
   },
   created() {
     this.paintings = this.$store.state.paintings
+  },
+  mounted() {
+    this.$root.$on('search', searchValue => {
+      this.paintings = this.$store.state.paintings.filter(item => item.title === searchValue)
+    })
+    this.$root.$on('refreshAll', () => {
+      this.paintings = this.$store.state.paintings
+    })
+    this.$root.$on('refreshSold', () => {
+      this.paintings = this.$store.state.paintings.filter(item => item.isSold)
+    })
   },
   watch: {
     '$route'(to, from) {
@@ -166,4 +181,7 @@ export default {
     &.basket
       &:after
         display: block
+
+  &__no-items
+    @include roboto-18-27-light
 </style>

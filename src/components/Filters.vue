@@ -30,6 +30,11 @@ export default {
     tabClick(index) {
       this.filters.forEach(item => item.active = false)
       this.filters[index].active = true
+      if(index === 0) {
+        this.$root.$emit('refreshAll')
+      } else if(index === 1) {
+        this.$root.$emit('refreshSold')
+      }
     }
   },
   watch: {
