@@ -50,13 +50,15 @@ export default{
   .footer
     margin: 150px 0 0
 
-  .footer
-    display: none
-
 @media screen and (max-width: 1500px)
   #app
     .app__filter-search
       max-width: 80%
+
+@media screen and (max-width: 1200px)
+  #app
+    .footer
+      margin: 100px 0 0
 
 @media screen and (max-width: 992px)
   #app
@@ -80,6 +82,8 @@ export default{
       margin: 50px 0
     .app__filter-search
       margin: 0 auto 50px
+    .footer
+      margin: 50px 0 0
 
 @media screen and (max-width: 576px)
   #app
