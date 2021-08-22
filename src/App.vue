@@ -39,16 +39,38 @@ export default{
   .title
     margin: 80px 0
   .app__filter-search
+    max-width: 1216px
     display: grid
     grid-template-columns: 1fr 1fr
-    margin: 0 0 90px
+    margin: 0 auto 90px
     .search
       justify-self: right
   .footer
     margin: 150px 0 0
 
-  .app__filter-search, .paintings, .footer
+  .paintings, .footer
     display: none
+
+@media screen and (max-width: 1500px)
+  #app
+    .app__filter-search
+      max-width: 80%
+
+@media screen and (max-width: 992px)
+  #app
+    .app__filter-search
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(2, min-content)
+      grid-gap: 30px
+      .filters
+        grid-column: 1/2
+        grid-row: 2/3
+        justify-self: center
+      .search
+        grid-column: 1/2
+        grid-row: 1/2
+        justify-self: center
+
 
 @media screen and (max-width: 768px)
   #app
@@ -59,5 +81,7 @@ export default{
   #app
     .title
       margin: 30px 0
+    .app__filter-search
+      max-width: unset
 
 </style>

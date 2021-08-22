@@ -45,7 +45,7 @@ export default {
     border-bottom: 1px solid $light
     background: transparent
     color: $light
-    padding: 0 100px 0 0
+    padding: 0 90px 0 0
     @include roboto-16-24-light
     &::placeholder
       @include roboto-16-24-light
@@ -66,4 +66,16 @@ export default {
     &-text
       @include roboto-14-20-096-light-uppercase
     &-img
+
+@media screen and (max-width: 1200px)
+  .search
+    width: 304px
+
+@media screen and (max-width: 576px)
+  .search
+    width: 80%
+    &__input
+      padding: 0 40px 0 0
+    &__btn-text
+      display: none
 </style>

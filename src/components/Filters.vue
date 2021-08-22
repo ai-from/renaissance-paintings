@@ -67,4 +67,11 @@ export default {
     &.active
       border: 1px solid $tab-active
       opacity: 1
+
+@media screen and (max-width: 576px)
+  .filters
+    &__tab
+      display: block
+      margin: 0 0 10px 0
+      text-align: center
 </style>
