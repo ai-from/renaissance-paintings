@@ -37,6 +37,7 @@ export default{
 .header
   display: grid
   grid-template-columns: 1fr 1fr
+  padding: 50px 90px 0
   &__logo
     cursor: pointer
   &__left
@@ -69,4 +70,22 @@ export default{
     display: grid
     justify-content: center
     align-content: center
+
+@media screen and (max-width: 1500px)
+  .header
+    padding: 25px 45px 0
+
+@media screen and (max-width: 768px)
+  .header
+    padding: 25px 14px 0
+    &__left
+      grid-column-gap: 12px
+      &-text
+        font-size: 12px
+        line-height: 18px
+    &__right
+      grid-template-columns: repeat(2, min-content)
+      grid-column-gap: 6px
+      &-text
+        display: none
 </style>

@@ -2,8 +2,10 @@
   <div id="app">
     <Header />
     <Title />
-    <Filters />
-    <Search />
+    <div class="app__filter-search">
+      <Filters />
+      <Search />
+    </div>
     <Paintings />
     <Footer />
   </div>
@@ -32,4 +34,19 @@ export default{
 
 <style lang="sass">
 #app
+  max-width: 1920px
+  margin: 0 auto
+  .title
+    margin: 80px 0
+  .app__filter-search
+    display: grid
+    grid-template-columns: 1fr 1fr
+    margin: 0 0 90px
+    .search
+      justify-self: right
+  .footer
+    margin: 150px 0 0
+
+  .title, .app__filter-search, .paintings, .footer
+    display: none
 </style>
