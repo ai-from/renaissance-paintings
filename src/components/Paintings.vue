@@ -164,6 +164,8 @@ export default {
     &__price
     &__oldPrice
       @include roboto-14-21-light
+      text-decoration: line-through
+      opacity: .66
     &__newPrice
       @include robotoBold-16-24-light-700
 
