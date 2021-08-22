@@ -81,8 +81,8 @@ export default{
     &__left
       grid-column-gap: 12px
       &-text
-        font-size: 12px
-        line-height: 18px
+        font-size: .75rem
+        line-height: 1.125rem
     &__right
       grid-template-columns: repeat(2, min-content)
       grid-column-gap: 6px

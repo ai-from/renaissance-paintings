@@ -47,6 +47,17 @@ export default{
   .footer
     margin: 150px 0 0
 
-  .title, .app__filter-search, .paintings, .footer
+  .app__filter-search, .paintings, .footer
     display: none
+
+@media screen and (max-width: 768px)
+  #app
+    .title
+      margin: 50px 0
+
+@media screen and (max-width: 576px)
+  #app
+    .title
+      margin: 30px 0
+
 </style>
