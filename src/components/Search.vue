@@ -1,6 +1,7 @@
 <template>
   <div class="search">
     <input
+      @keyup.enter="search"
       v-model="searchValue"
       type="text"
       class="search__input"
